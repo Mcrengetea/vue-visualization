@@ -1,23 +1,17 @@
+import AppMain from '../layout/AppMain.vue';
+
 // pureCSS
 export default {
     path: '/pureCSS',
     name: 'PureCSS',
-    component: () => import('@/views/PureCSS/index.vue'),
-    meta: {
-        navState: true,
-        navName: '纯CSS',
-        icon: 'el-icon-cold-drink'
-    },
+    component: AppMain,
+    meta: { title: '纯CSS', icon: 'DataLine' },
     children: [
         {
             path: 'parallax',
             name: 'Parallax',
-            component: () => import('@/views/PureCSS/Parallax/PureCSS.vue'),
-            meta: {
-                navState: true,
-                navName: '视差图',
-                icon: 'el-icon-s-shop'
-            }
+            component: () => import('@/views/PureCSS/Parallax/Parallax.vue'),
+            meta: { title: '视差图', icon: 'DataLine' }
         }
     ]
 }

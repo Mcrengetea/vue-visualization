@@ -19,6 +19,7 @@ export const routes = [
   { // 404
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('../views/NotFound/NotFound.vue')
+    component: () => import('../views/NotFound/NotFound.vue'),
+    hidden: true
   }
 ]

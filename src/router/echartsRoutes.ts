@@ -1,33 +1,23 @@
+import AppMain from '../layout/AppMain.vue';
+
 // echarts
 export default {
     path: '/echarts',
     name: 'Echarts',
-    component: () => import('@/views/Echarts/index.vue'),
-    meta: {
-        navState: true,
-        navName: 'Echarts',
-        icon: 'el-icon-cold-drink'
-    },
+    component: AppMain,
+    meta: { title: 'Echarts', icon: 'DataAnalysis' },
     children: [
         {
             path: 'basic',
-            name: 'Basic',
+            name: 'EchartsBasic',
             component: () => import('@/views/Echarts/Basic/Basic.vue'),
-            meta: {
-                navState: true,
-                navName: '基础',
-                icon: 'el-icon-s-shop'
-            }
+            meta: { title: '基础', icon: 'TrendCharts' }
         },
         {
             path: 'DataTable',
             name: 'DataTable',
             component: () => import('@/views/Echarts/DataTable/DataTable.vue'),
-            meta: {
-                navState: true,
-                navName: '数据表格',
-                icon: 'el-icon-s-shop'
-            }
+            meta: { title: '数据表格', icon: 'DataLine' },
         }
     ]
 }

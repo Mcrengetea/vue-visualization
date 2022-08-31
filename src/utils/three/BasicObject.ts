@@ -1,4 +1,4 @@
-import { BoxBufferGeometry, Mesh, MeshStandardMaterial, Object3D, PlaneBufferGeometry, SphereBufferGeometry, } from 'three';
+import { BoxBufferGeometry, Mesh, MeshStandardMaterial, Object3D, PlaneBufferGeometry, SphereBufferGeometry } from 'three';
 import { pictureTexture } from './Texture';
 
 export const basicObjectList: Object3D[] = [];

@@ -1,23 +1,17 @@
+import AppMain from '../layout/AppMain.vue';
+
 // map
 export default {
     path: '/map',
     name: 'Map',
-    component: () => import('@/views/Map/index.vue'),
-    meta: {
-        navState: true,
-        navName: '高德地图',
-        icon: 'el-icon-cold-drink'
-    },
+    component: AppMain,
+    meta: { title: '高德地图', icon: 'DataLine' },
     children: [
         {
             path: 'basic',
-            name: 'Basic',
+            name: 'MapBasic',
             component: () => import('@/views/Map/Basic/Basic.vue'),
-            meta: {
-                navState: true,
-                navName: '基础',
-                icon: 'el-icon-s-shop'
-            }
-        }
+            meta: { title: '基础', icon: 'DataLine' }
+        },
     ]
 }

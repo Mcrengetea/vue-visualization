@@ -1,10 +1,8 @@
 <template>
-    <div>basic</div>
+    <div>echartsbasic</div>
 </template>
 
 <script setup lang='ts'>
-import { } from 'vue'
-
 
 </script>
 
