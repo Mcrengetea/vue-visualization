@@ -10,7 +10,15 @@ import Layout from './layout/Layout.vue';
 html,
 body,
 #app {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url('./assets/image/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.sub-pop {
+  background: transparent!important;
+  backdrop-filter: blur(10px);
 }
 </style>

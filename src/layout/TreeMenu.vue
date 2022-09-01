@@ -4,7 +4,7 @@
             <Icon :name="item.meta.icon"></Icon>
             <template #title>{{ item.meta.title }}</template>
         </el-menu-item>
-        <el-sub-menu v-if="'children' in item" :index="item.path">
+        <el-sub-menu v-if="'children' in item" :index="item.path" popper-class="sub-pop">
             <template #title>
                 <Icon :name="item.meta.icon"></Icon>
                 <span>{{ item.meta.title }}</span>
@@ -36,4 +36,5 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+
 </style>

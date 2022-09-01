@@ -1,5 +1,5 @@
 <template>
-    <el-icon>
+    <el-icon :color="color">
         <component :is="name"></component>
     </el-icon>
 </template>
@@ -9,6 +9,9 @@ defineProps({
     name: {
         type: String,
         required: true
+    },
+    color: {
+        type: String
     }
 });
 </script>

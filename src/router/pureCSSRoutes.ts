@@ -5,13 +5,13 @@ export default {
     path: '/pureCSS',
     name: 'PureCSS',
     component: AppMain,
-    meta: { title: '纯CSS', icon: 'DataLine' },
+    meta: { title: '纯CSS', icon: 'Watermelon' },
     children: [
         {
             path: 'parallax',
             name: 'Parallax',
             component: () => import('@/views/PureCSS/Parallax/Parallax.vue'),
-            meta: { title: '视差图', icon: 'DataLine' }
+            meta: { title: '视差图', icon: 'Pear' }
         }
     ]
 }
