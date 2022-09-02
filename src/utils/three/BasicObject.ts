@@ -36,8 +36,9 @@ export const plane: Mesh = new Mesh(
     new PlaneBufferGeometry(192, 108),
     new MeshStandardMaterial({ map: pictureTexture })
 );
-plane.position.y = 45;
-plane.position.x = 45;
+plane.position.x = 10;
+plane.position.y = 10;
+plane.position.z = -50;
 plane.scale.set(0.3, 0.3, 0.3);
 
 basicObjectList.push(box, sphere, stage, plane);

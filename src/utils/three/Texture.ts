@@ -4,4 +4,4 @@ import { Texture, TextureLoader } from "three";
 const textureLoader: TextureLoader = new TextureLoader();
 
 // 加载纹理贴图
-export const pictureTexture: Texture = textureLoader.load('/favicon.ico');
+export const pictureTexture: Texture = textureLoader.load('./src/assets/image/bg.jpg');

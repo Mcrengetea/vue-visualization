@@ -17,7 +17,7 @@
 <script setup lang='ts'>
 import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import TreeMenu from './TreeMenu.vue';
+// import TreeMenu from './TreeMenu.vue';
 
 //#region 路由列表
 const router = useRouter();
