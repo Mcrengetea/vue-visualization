@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang='ts'>
-import { onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { Engine } from '@/utils/three/Engine';
 import { basicObjectList } from '@/utils/three/BasicObject';
 import { lightList } from '@/utils/three/Light';
@@ -12,10 +12,11 @@ import elementResizeDetectorMaker from 'element-resize-detector';
 
 // 获取引擎渲染节点
 const threeTarget = ref(null);
+let engine: null | Engine = null;
 
 onMounted(() => {
   // 初始化渲染引擎
-  const engine = new Engine(threeTarget.value!);
+  engine = new Engine(threeTarget.value!);
   // 导入基础模型
   engine.addObject(...basicObjectList);
   // 导入光源
@@ -25,7 +26,12 @@ onMounted(() => {
   // 初始化监听对象
   const erd = elementResizeDetectorMaker();
   // 监听元素宽高并重置相机
-  erd.listenTo(threeTarget.value!, () => engine.resize())
+  erd.listenTo(threeTarget.value!, () => engine!.resize())
+});
+
+onBeforeUnmount(() => {
+  // 销毁引擎实例
+  engine = null;
 });
 </script>
 

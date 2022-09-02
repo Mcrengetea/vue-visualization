@@ -1,16 +1,16 @@
 import AppMain from '../layout/AppMain.vue';
 
-// pureCSS
+// Native
 export default {
-    path: '/pureCSS',
-    name: 'PureCSS',
+    path: '/native',
+    name: 'Native',
     component: AppMain,
-    meta: { title: '纯CSS', icon: 'Watermelon' },
+    meta: { title: '原生', icon: 'Watermelon' },
     children: [
         {
             path: 'parallax',
             name: 'Parallax',
-            component: () => import('@/views/PureCSS/Parallax/Parallax.vue'),
+            component: () => import('@/views/Native/Parallax/Parallax.vue'),
             meta: { title: '视差图', icon: 'Pear' }
         }
     ]

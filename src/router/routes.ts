@@ -1,5 +1,5 @@
 import Home from '@/views/Home/Home.vue'
-import pureCSSRoutes from './pureCSSRoutes'
+import pureCSSRoutes from './nativeRoutes'
 import canvasRoutes from './canvasRoutes'
 import echartsRoutes from './echartsRoutes'
 import mapRoutes from './mapRoutes'
