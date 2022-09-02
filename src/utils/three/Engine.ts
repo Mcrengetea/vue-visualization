@@ -63,4 +63,11 @@ export class Engine {
             this.scene.add(item);
         });
     }
+
+    // 重置渲染画布和相机
+    resize() {
+        this.renderer.setSize(this.dom.offsetWidth, this.dom.offsetHeight, true);
+        this.camera.aspect = this.dom.offsetWidth / this.dom.offsetHeight;
+        this.camera.updateProjectionMatrix();
+    }
 }

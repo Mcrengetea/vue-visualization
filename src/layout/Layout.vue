@@ -7,7 +7,7 @@
             <el-header class="app-layout-header">
                 <Header />
             </el-header>
-            <el-main>
+            <el-main class="app-layout-main">
                 <router-view />
             </el-main>
         </el-container>
@@ -34,5 +34,12 @@ import Header from './Header.vue';
 .app-layout-header {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+}
+.app-layout-main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
 </style>

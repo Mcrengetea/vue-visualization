@@ -8,6 +8,7 @@ import { Engine } from '@/utils/three/Engine';
 import { basicObjectList } from '@/utils/three/BasicObject';
 import { lightList } from '@/utils/three/Light';
 import { helperList } from '@/utils/three/Helper';
+import elementResizeDetectorMaker from 'element-resize-detector';
 
 // 获取引擎渲染节点
 const threeTarget = ref(null);
@@ -21,8 +22,11 @@ onMounted(() => {
   engine.addObject(...lightList);
   // 导入辅助对象
   engine.addObject(...helperList);
-})
-
+  // 初始化监听对象
+  const erd = elementResizeDetectorMaker();
+  // 监听元素宽高并重置相机
+  erd.listenTo(threeTarget.value!, () => engine.resize())
+});
 </script>
 
 <style lang="scss" scoped>
