@@ -40,5 +40,9 @@ const cardBody = reactive({
     justify-content: flex-start;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    .card-header>span {
+        color:#fff;
+        font-weight: 900;
+    }
 }
 </style>
