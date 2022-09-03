@@ -8,6 +8,12 @@ export default {
     meta: { title: 'Canvas', icon: 'Sugar' },
     children: [
         {
+            path: 'Gobang',
+            name: 'Gobang',
+            component: () => import('@/views/Canvas/Gobang/Gobang.vue'),
+            meta: { title: '五子棋', icon: 'Grape' },
+        },
+        {
             path: 'ShadowDog',
             name: 'ShadowDog',
             component: () => import('@/views/Canvas/ShadowDog/ShadowDog.vue'),
