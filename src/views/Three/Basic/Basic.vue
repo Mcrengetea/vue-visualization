@@ -11,7 +11,7 @@ import { helperList } from '@/utils/three/Helper';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 // 获取引擎渲染节点
-const threeTarget = ref(null);
+const threeTarget = ref<HTMLElement>();
 let engine: null | Engine = null;
 
 onMounted(() => {

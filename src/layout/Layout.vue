@@ -35,9 +35,10 @@ import Header from './Header.vue';
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
 }
+
 .app-layout-main {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 60px);
     box-sizing: border-box;
     overflow: hidden;
     position: relative;

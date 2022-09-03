@@ -14,10 +14,16 @@ export default {
             meta: { title: '基础', icon: 'IceCream' }
         },
         {
+            path: 'DynamicChart',
+            name: 'DynamicChart',
+            component: () => import('@/views/Echarts/DynamicChart/DynamicChart.vue'),
+            meta: { title: '动态表格', icon: 'Magnet' },
+        },
+        {
             path: 'DataTable',
             name: 'DataTable',
             component: () => import('@/views/Echarts/DataTable/DataTable.vue'),
-            meta: { title: '数据表格', icon: 'IceDrink' },
+            meta: { title: '数据展示', icon: 'IceDrink' },
         }
     ]
 }
