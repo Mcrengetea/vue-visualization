@@ -6,7 +6,11 @@ import {
     // 系列类型的定义后缀都为 SeriesOption
     BarSeriesOption,
     LineChart,
-    LineSeriesOption
+    LineSeriesOption,
+    CustomChart,
+    CustomSeriesOption,
+    PieChart,
+    PieSeriesOption
 } from 'echarts/charts';
 // 引入提示框，标题，直角坐标系，数据集，内置数据转换器组件，组件后缀都为 Component
 import {
@@ -34,6 +38,8 @@ import { CanvasRenderer } from 'echarts/renderers';
 type ECOption = echarts.ComposeOption<
     | BarSeriesOption
     | LineSeriesOption
+    | CustomSeriesOption
+    | PieSeriesOption
     | TitleComponentOption
     | TooltipComponentOption
     | GridComponentOption
@@ -51,6 +57,8 @@ echarts.use([
     LegendComponent,
     BarChart,
     LineChart,
+    CustomChart,
+    PieChart,
     LabelLayout,
     UniversalTransition,
     CanvasRenderer

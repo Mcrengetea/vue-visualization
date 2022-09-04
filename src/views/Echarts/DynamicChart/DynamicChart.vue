@@ -1,26 +1,26 @@
 <template>
-    <div class="echarts-box" ref="echartsBox"></div>
+    <Chart :option="option" width="600px" height="500px" :dynamic="run" :dynamicData="dynamicData" />
 </template>
 
 <script setup lang='ts'>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import echarts from '@/utils/echarts/echarts';
+import { reactive } from 'vue';
 
 //#region  DynamicChart
-// 获取echarts渲染节点
-const echartsBox = ref<HTMLElement>();
-let chart: any = null;
-
 // 构造数据
 const data: number[] = [];
 for (let i = 0; i < 5; ++i) {
     data.push(Math.round(Math.random() * 200));
 }
 
-let timer: any = null;
+const dynamicData: any = reactive({
+    series: [{
+        type: 'bar',
+        data
+    }]
+});
 
 // echarts配置项
-const option = {
+const option: any = {
     xAxis: {
         max: 'dataMax'
     },
@@ -54,14 +54,6 @@ const option = {
     animationEasingUpdate: 'linear'
 };
 
-// 渲染函数
-function chartInit() {
-    // 指定echarts容器元素
-    chart = echarts.init(echartsBox.value!);
-    // 设置图表
-    chart.setOption<echarts.EChartsOption>(option);
-}
-
 // 动态生成数据并渲染
 function run() {
     for (var i = 0; i < data.length; ++i) {
@@ -71,38 +63,9 @@ function run() {
             data[i] += Math.round(Math.random() * 200);
         }
     }
-    chart.setOption<echarts.EChartsOption>({
-        series: [
-            {
-                type: 'bar',
-                data
-            }
-        ]
-    });
 }
-
-onMounted(() => {
-    // 初始化echarts
-    chartInit();
-    // 创建定时器
-    timer = setInterval(function () {
-        run();
-    }, 3000);
-});
-
-onBeforeUnmount(() => {
-    // 销毁echarts实例
-    chart.dispose();
-    // 销毁定时器
-    clearInterval(timer);
-});
 //#endregion
 </script>
 
 <style lang="scss" scoped>
-.echarts-box {
-    width: 600px;
-    height: 500px;
-    background-color: #fff;
-}
 </style>

@@ -1,8 +1,8 @@
 <template>
     <el-scrollbar>
-        <el-card id="dataReportDev">
+        <el-card class="data-table-box">
             <TopView />
-            <SalseView />
+            <MiddleView />
             <BottomView />
         </el-card>
     </el-scrollbar>
@@ -10,15 +10,14 @@
 
 <script setup lang='ts'>
 import TopView from './components/TopView/TopView.vue';
-import SalseView from './components/SalseView/SalseView.vue';
+import MiddleView from './components/MiddleView/MiddleView.vue';
 import BottomView from './components/BottomView/BottomView.vue';
 </script>
 
 <style lang="scss" scoped>
-#dataReportDev {
+.data-table-box {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    overflow: hidden;
 }
 </style>

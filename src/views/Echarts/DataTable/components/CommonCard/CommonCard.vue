@@ -1,7 +1,7 @@
 <template>
-  <div class="common__card">
-    <div class="title">{{title}}</div>
-    <div class="value">{{value}}</div>
+  <div>
+    <div class="title">{{ title }}</div>
+    <div class="value">{{ value }}</div>
     <div class="chart">
       <slot></slot>
     </div>
@@ -12,11 +12,17 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  title: String,
-  value: String
-})
+<script setup lang='ts'>
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  value: {
+    type: String,
+    required: true
+  }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -44,35 +50,5 @@ const props = defineProps({
 .total {
   font-size: 12px;
   color: #666;
-}
-</style>
-
-<style lang="scss">
-.emphasis {
-  margin-left: 5px;
-  color: #333;
-  font-weight: 700;
-}
-
-.increase {
-  width :0;
-  height: 0;
-  border: {
-    width: 4px;
-    color: transparent transparent red transparent;
-    style: solid;
-  }
-  margin: 0 0 4px 5px;
-}
-
-.decrease {
-  width :0;
-  height: 0;
-  border: {
-    width: 4px;
-    color: green transparent transparent transparent;
-    style: solid;
-  }
-  margin: 4px 0 0 5px;
 }
 </style>
