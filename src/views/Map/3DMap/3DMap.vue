@@ -25,7 +25,8 @@ function loadMap() {
 // 初始化地图参数
 const initMap = (AMap) => {
     map = new AMap.Map(amap.value!, {
-        viewMode: "2D",
+        viewMode: "3D",
+        terrain: true,
         resizeEnable: true /* 城市定位 */,
         zooms: [1, 18],
         zoom: 14
