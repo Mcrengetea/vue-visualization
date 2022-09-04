@@ -18,17 +18,17 @@ import { onMounted, ref } from 'vue'
 </script>
 
 <style lang="scss" scoped>
-    .box {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .chessboard {
-    
-    box-shadow: 5px 5px 5px #b9b9b9, -2px -2px 2px #f3f3f3;
-}
-    }
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+    .chessboard {
+        background: #fff;
+        box-shadow: 5px 5px 5px #b9b9b9, -2px -2px 2px #f3f3f3;
+    }
+}
 </style>

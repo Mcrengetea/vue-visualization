@@ -1,5 +1,5 @@
 import { MOUSE, Object3D, PerspectiveCamera, Scene, Vector3, WebGLRenderer } from 'three';
-import Stats from 'three/examples/jsm/libs/stats.module';
+// import Stats from 'three/examples/jsm/libs/stats.module';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export class Engine {

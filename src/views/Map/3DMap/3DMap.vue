@@ -7,7 +7,7 @@ import { ref, onBeforeUnmount, onMounted } from 'vue';
 import AMapLoader from '@amap/amap-jsapi-loader';
 
 //#region 高德地图
-const amap = ref(null);
+const amap = ref<HTMLElement>();
 let map: any = null;
 
 function loadMap() {

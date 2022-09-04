@@ -17,7 +17,7 @@ export default {
             path: 'ShadowDog',
             name: 'ShadowDog',
             component: () => import('@/views/Canvas/ShadowDog/ShadowDog.vue'),
-            meta: { title: 'ShadowDog', icon: 'Grape' },
+            meta: { title: 'ShadowDog', icon: 'SwitchFilled' },
         }
     ]
 }
