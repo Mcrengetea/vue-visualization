@@ -28,7 +28,8 @@ const initMap = (AMap) => {
         viewMode: "2D",
         resizeEnable: true /* 城市定位 */,
         zooms: [1, 18],
-        zoom: 14
+        zoom: 14,
+        layers: [new AMap.TileLayer.Satellite()]
     });
     // 比例尺
     map.addControl(new AMap.Scale());
