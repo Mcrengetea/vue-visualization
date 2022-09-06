@@ -23,7 +23,7 @@ function loadMap() {
 }
 
 // 初始化地图参数
-const initMap = (AMap) => {
+const initMap = (AMap:any) => {
     map = new AMap.Map(amap.value!, {
         viewMode: "3D",
         terrain: true,
