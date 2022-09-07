@@ -4,6 +4,10 @@
 
 vite3 + vue3 + vue-router4 + element-plus + Threejs
 
+#### Demo
+
+https://mcrengetea.github.io/vue-visualization/
+
 #### Project setup
 
 ```
