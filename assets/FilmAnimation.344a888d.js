@@ -1,1 +1,0 @@
-import{i as e,o,c as t,p as a,q as _,a as c}from"./index.69065d26.js";const d={},n=s=>(a("data-v-279734d6"),s=s(),_(),s),i={class:"box"},r=n(()=>c("div",{class:"background grain"},[c("div",{class:"outer-scratch"},[c("div",{class:"inner-scratch"})])],-1)),p=[r];function l(s,h){return o(),t("div",i,p)}const u=e(d,[["render",l],["__scopeId","data-v-279734d6"]]);export{u as default};
