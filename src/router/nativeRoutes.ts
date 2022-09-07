@@ -16,31 +16,31 @@ export default {
                 {
                     path: 'CubicWord',
                     name: 'CubicWord',
-                    component: () => import('@/views/Native/PureCSS/CubicWord.vue'),
+                    component: () => import('../views/Native/PureCSS/CubicWord.vue'),
                     meta: { title: '立体文字', icon: 'Box' }
                 },
                 {
                     path: 'Clock',
                     name: 'Clock',
-                    component: () => import('@/views/Native/PureCSS/Clock.vue'),
+                    component: () => import('../views/Native/PureCSS/Clock.vue'),
                     meta: { title: '时钟', icon: 'AlarmClock' }
                 },
                 {
                     path: 'DensePaving',
                     name: 'DensePaving',
-                    component: () => import('@/views/Native/PureCSS/DensePaving.vue'),
+                    component: () => import('../views/Native/PureCSS/DensePaving.vue'),
                     meta: { title: '密铺图案', icon: 'KnifeFork' }
                 },
                 {
                     path: 'Sticker',
                     name: 'Sticker',
-                    component: () => import('@/views/Native/PureCSS/Sticker.vue'),
+                    component: () => import('../views/Native/PureCSS/Sticker.vue'),
                     meta: { title: '便利贴', icon: 'PriceTag' }
                 },
                 {
                     path: 'FilmAnimation',
                     name: 'FilmAnimation',
-                    component: () => import('@/views/Native/PureCSS/FilmAnimation.vue'),
+                    component: () => import('../views/Native/PureCSS/FilmAnimation.vue'),
                     meta: { title: '电影动画', icon: 'MagicStick' }
                 },
             ]
@@ -48,7 +48,7 @@ export default {
         {
             path: 'parallax',
             name: 'Parallax',
-            component: () => import('@/views/Native/Parallax/Parallax.vue'),
+            component: () => import('../views/Native/Parallax/Parallax.vue'),
             meta: { title: '视差图', icon: 'Pear' }
         }
     ]

@@ -10,13 +10,13 @@ export default {
         {
             path: 'Gobang',
             name: 'Gobang',
-            component: () => import('@/views/Canvas/Gobang/Gobang.vue'),
+            component: () => import('../views/Canvas/Gobang/Gobang.vue'),
             meta: { title: '五子棋', icon: 'Grape' },
         },
         {
             path: 'ShadowDog',
             name: 'ShadowDog',
-            component: () => import('@/views/Canvas/ShadowDog/ShadowDog.vue'),
+            component: () => import('../views/Canvas/ShadowDog/ShadowDog.vue'),
             meta: { title: 'ShadowDog', icon: 'SwitchFilled' },
         }
     ]
