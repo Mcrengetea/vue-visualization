@@ -4,10 +4,10 @@
 
 <script setup lang='ts'>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { Engine } from '@/utils/three/Engine';
-import { basicObjectList } from '@/utils/three/BasicObject';
-import { lightList } from '@/utils/three/Light';
-import { helperList } from '@/utils/three/Helper';
+import { Engine } from '@/utils/three/basic/Engine';
+import { basicObjectList } from '@/utils/three/basic/BasicObject';
+import { lightList } from '@/utils/three/basic/Light';
+import { helperList } from '@/utils/three/basic/Helper';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 // 获取引擎渲染节点
@@ -27,14 +27,14 @@ onMounted(() => {
 	// 初始化监听对象
 	erd = elementResizeDetectorMaker();
 	// 监听元素宽高并重置相机
-	erd.listenTo(threeTarget.value!, () => engine!.resize())
+	erd.listenTo(threeTarget.value!, () => engine!.resize());
 });
 
 onBeforeUnmount(() => {
 	// 销毁引擎实例
 	engine = null;
 	// 销毁元素监听器
-	erd.uninstall(threeTarget.value!)
+	erd.uninstall(threeTarget.value!);
 });
 </script>
 

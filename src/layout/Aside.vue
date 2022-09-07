@@ -1,6 +1,6 @@
 <template>
     <div class="app-logo">
-        <img src="@/assets/image/avatar.png" alt="logo" draggable="false" @click="toHome" />
+        <img src="/image/avatar.png" alt="logo" draggable="false" @click="toHome" />
     </div>
     <el-scrollbar>
         <el-menu router :collapse="isCollapse" :default-active="currentPath" class="app-aside-menu"

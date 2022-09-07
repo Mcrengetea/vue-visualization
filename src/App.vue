@@ -13,7 +13,7 @@ body,
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: url('./assets/image/bg.jpg') no-repeat;
+  background: url('image/bg.jpg') no-repeat;
   background-size: 100% 100%;
 }
 

@@ -1,11 +1,11 @@
-import Game from "./game"
+import Game from "./Game";
 
 export class InputHandler{
-    game: Game
-    keys: string[]
+    public game: Game;
+    public keys: string[];
     constructor(game:Game){
-        this.game=game
-        this.keys=[]
+        this.game=game;
+        this.keys=[];
         window.addEventListener('keydown',e=>{
             if((e.key==='ArrowDown' ||
                 e.key==='ArrowUp'||
@@ -14,13 +14,13 @@ export class InputHandler{
                 e.key==='Enter'
                 )
                 &&this.keys.indexOf(e.key)===-1){
-                this.keys.push(e.key)
+                this.keys.push(e.key);
             }
             else if(e.key==='d'){
-                this.game.debug=!this.game.debug
+                this.game.debug=!this.game.debug;
             }
             
-        })
+        });
         window.addEventListener('keyup',e=>{
             if(e.key==='ArrowDown'||
                 e.key==='ArrowUp'||
@@ -28,8 +28,8 @@ export class InputHandler{
                 e.key==='ArrowRight'||
                 e.key==='Enter')
                 {
-                this.keys.splice(this.keys.indexOf(e.key),1)
+                this.keys.splice(this.keys.indexOf(e.key),1);
             }
-        })
+        });
     }
 }

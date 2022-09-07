@@ -10,7 +10,7 @@ export default {
         {
             path: 'PureCSS',
             name: 'PureCSS',
-            component: AppMain,
+            // component: AppMain,
             meta: { title: '纯CSS', icon: 'Ship' },
             children: [
                 {

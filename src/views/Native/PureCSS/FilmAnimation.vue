@@ -22,7 +22,7 @@
 .background {
     width: 100%;
     height: 100%;
-    background-image: url('@/assets/image/abstract.jpg');
+    background-image: url('image/abstract.jpg');
     background-size: cover;
 }
 
@@ -41,7 +41,7 @@
     left: 0;
     padding-left: 100px;
     opacity: .08;
-    background: url('@/assets/image/scratch.png') repeat center center;
+    background: url('image/scratch.png') repeat center center;
     -webkit-animation: scratch 0.45s steps(1) infinite;
     animation: scratch 0.45s steps(1) infinite;
 }
@@ -60,7 +60,7 @@
     top: -5%;
     left: -5%;
     opacity: .11;
-    background: url('@/assets/image/grain.jpg') repeat center center;
+    background: url('image/grain.jpg') repeat center center;
     -webkit-animation: grain 0.5s steps(1) infinite;
     animation: grain 0.5s steps(1) infinite;
 }

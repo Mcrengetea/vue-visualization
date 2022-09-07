@@ -6,7 +6,7 @@
 
 <script setup lang='ts'>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { Game } from '@/utils/canvas/gobang/game';
+import { Game } from '@/utils/canvas/gobang/Game';
 
 const chessboard = ref<HTMLCanvasElement>();
 let game: Game | null = null;
