@@ -4,5 +4,5 @@ import { EquirectangularReflectionMapping, Texture, TextureLoader } from "three"
 const textureLoader: TextureLoader = new TextureLoader();
 
 // 加载纹理贴图
-export const panoramaTexture: Texture = textureLoader.load('/venice_sunset_1k.png');
+export const panoramaTexture: Texture = textureLoader.load('image/venice_sunset_1k.png');
 panoramaTexture.mapping = EquirectangularReflectionMapping;
